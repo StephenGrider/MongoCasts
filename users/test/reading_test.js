@@ -10,7 +10,11 @@ describe('Reading users out of the database', () => {
       .then(() => done());
   });
 
-  it('finds all users with a name of joe', () => {
-    
+  it('finds all users with a name of joe', (done) => {
+    User.find({ name: 'Joe' })
+      .then((users) => {
+        console.log(users);
+        done();
+      });
   });
 });
