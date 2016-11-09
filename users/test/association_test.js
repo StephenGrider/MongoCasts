@@ -15,5 +15,15 @@ describe('Assocations', () => {
     blogPost.comments.push(comment);
     comment.user = joe;
 
+    Promise.all([joe.save(), blogPost.save(), comment.save()])
+      .then(() => done());
+  });
+
+  it.only('saves a relation between a user and a blogpost', (done) => {
+    User.findOne({ name: 'Joe' })
+      .then((user) => {
+        console.log(user);
+        done();
+      });
   });
 });
