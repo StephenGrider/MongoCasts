@@ -1,0 +1,89 @@
+.input-field label {
+  left: 0;
+}
+
+.range-slider {
+  margin: 65px 0 30px;
+}
+
+.range-slider label {
+  top: -37px;
+}
+
+label {
+  color: white !important;
+}
+
+.pagination li > a {
+  cursor: pointer;
+}
+
+.pagination {
+  margin-bottom: 5px;
+}
+
+a.secondary-content {
+  position: relative !important;
+  flex: 1;
+  text-align: right;
+  top: 0px !important;
+  right: 0px !important;
+}
+
+.secondary-content .material-icons {
+  font-size: 36px;
+}
+
+.artist-detail .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.album img {
+  width: 250px !important;
+}
+
+.has-error {
+  color: red;
+}
+
+.spacer a {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+li.collection-item.avatar {
+  display: flex;
+  align-items: center;
+  padding-left: 10px !important;
+}
+
+li.collection-item.avatar img {
+  position: relative !important;
+  left: 0px !important;
+  margin: 0px 10px !important;
+}
+
+.retired {
+  background-color: #ddd !important;
+}
+
+.select {
+  font-size: 1rem;
+}
+
+select {
+  display: block !important;
+  margin-bottom: 10px;
+  height: 30px;
+  color: black;
+}
