@@ -20,7 +20,7 @@ describe('Assocations', () => {
   });
 
   it.only('saves a relation between a user and a blogpost', (done) => {
-    User.findOne({ name: 'Joe' })
+    User.findOne({ name: 'Joe' }).then()
       .then((user) => {
         console.log(user);
         done();
