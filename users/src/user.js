@@ -24,6 +24,9 @@ UserSchema.virtual('postCount').get(function() {
 });
 
 UserSchema.pre('remove', function() {
+  const BlogPost = mongoose.model('blogPost');
+  // this === joe
+
 
 });
 
