@@ -7,4 +7,5 @@ const Artist = require('../models/artist');
  * @return {promise} A promise that resolves when the record is edited
  */
 module.exports = (_id, artistProps) => {
+  return Artist.update({ _id }, artistProps);
 };
