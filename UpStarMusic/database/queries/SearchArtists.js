@@ -20,6 +20,11 @@ module.exports = (criteria, sortProperty, offset = 0, limit = 20) => {
 
   return Promise.all([query, Artist.count()])
     .then((results) => {
-      return { all: results[0], count: results[1], offset: offset, limit: limit };
+      return {
+        all: results[0],
+        count: results[1],
+        offset: offset,
+        limit: limit
+      };
     });
 };
