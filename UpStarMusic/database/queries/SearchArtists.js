@@ -36,5 +36,12 @@ const buildQuery = (criteria) => {
     };
   }
 
+  if (criteria.yearsActive) {
+    query.yearsActive = {
+      $gte: criteria.yearsActive.min,
+      $lte: criteria.yearsActive.max
+    };
+  }
+
   return query;
 };
