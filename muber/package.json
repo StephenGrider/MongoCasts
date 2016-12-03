@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.14.0",
     "mocha": "^3.2.0",
-    "mongoose": "^4.7.1"
+    "mongoose": "^4.7.1",
+    "supertest": "^2.0.1"
   }
 }
