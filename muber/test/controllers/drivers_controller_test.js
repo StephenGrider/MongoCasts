@@ -19,4 +19,14 @@ describe('Drivers controller', () => {
         });
     });
   });
+
+  it('Post to /api/drivers requires an email', (done) => {
+    request(app)
+      .post('/api/drivers')
+      .send({})
+      .end((err, res) => {
+        assert(res.body.error);
+        done();
+      });
+  })
 });
