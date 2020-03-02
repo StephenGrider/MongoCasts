@@ -4,10 +4,17 @@ module.exports = {
   index(req, res, next) {
     const { lng, lat } = req.query;
 
-    Driver.geoNear(
-      { type: 'Point', coordinates: [parseFloat(lng), parseFloat(lat)] },
-      { spherical: true, maxDistance: 200000 }
-    )
+    Driver.find({
+      geometry: {
+        $nearSphere: {
+          $geometry: {
+            type: "Point",
+            coordinates: [parseFloat(lng), parseFloat(lat)]
+          },
+          $maxDistance: 200000
+        }
+      }
+    })
       .then(drivers => res.send(drivers))
       .catch(next);
   },
